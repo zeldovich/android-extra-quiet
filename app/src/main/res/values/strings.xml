@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Extra Quiet</string>
+    <string name="tile_label">Extra quiet</string>
+    <string name="tile_subtitle_on">−%1$d dB</string>
+    <string name="tile_subtitle_off">Off</string>
+    <string name="switch_label">Extra quiet</string>
+    <string name="status_on">On. Global effect: %1$s</string>
+    <string name="status_off">Off. Normal volume.</string>
+    <string name="reduction_label">Extra reduction: %1$d dB</string>
+    <string name="reduction_hint">Every 10 dB is roughly half as loud. 20–30 dB is a good starting point.</string>
+    <string name="add_tile">Add Quick Settings tile</string>
+    <string name="tile_already_added">The tile is already in Quick Settings.</string>
+    <string name="channel_name">Extra quiet status</string>
+    <string name="notification_title">Extra quiet is on</string>
+    <string name="notification_text">All audio reduced by %1$d dB</string>
+    <string name="turn_off">Turn off</string>
+    <string name="help_text">While Extra quiet is on, all audio is cut by the amount above, so the normal volume buttons work across a much quieter range. Turn it on from the Quick Settings tile (swipe down twice, tap the pencil/edit button, and drag \"Extra quiet\" in if you don\'t see it). Long-press the tile to come back here.\n\nIf a particular app isn\'t affected, your phone may not allow global audio effects; apps that support system equalizers (most music players) are handled individually.</string>
+</resources>
