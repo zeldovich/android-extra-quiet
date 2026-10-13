@@ -1,4 +1,4 @@
-package org.extraquiet;
+package net.kolya.android.extraquiet;
 
 import android.media.audiofx.AudioEffect;
 import android.media.audiofx.DynamicsProcessing;

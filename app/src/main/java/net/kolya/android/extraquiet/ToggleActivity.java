@@ -1,4 +1,4 @@
-package org.extraquiet;
+package net.kolya.android.extraquiet;
 
 import android.app.Activity;
 import android.os.Bundle;

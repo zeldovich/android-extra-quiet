@@ -1,4 +1,4 @@
-package org.extraquiet;
+package net.kolya.android.extraquiet;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -28,7 +28,7 @@ public class QuietService extends Service {
     private static final String TAG = "ExtraQuiet";
     private static final String CHANNEL_ID = "extra_quiet";
     private static final int NOTIFICATION_ID = 1;
-    static final String ACTION_STOP = "org.extraquiet.STOP";
+    static final String ACTION_STOP = "net.kolya.android.extraquiet.STOP";
 
     private static volatile boolean running;
     private static volatile String globalStatus = "";

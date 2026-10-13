@@ -1,4 +1,4 @@
-package org.extraquiet;
+package net.kolya.android.extraquiet;
 
 import android.Manifest;
 import android.annotation.TargetApi;

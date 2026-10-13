@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = 'org.extraquiet'
+    namespace = 'net.kolya.android.extraquiet'
     compileSdk = 36
 
     defaultConfig {
-        applicationId = 'org.extraquiet'
+        applicationId = 'net.kolya.android.extraquiet'
         minSdk = 29
         targetSdk = 36
         versionCode = 1
