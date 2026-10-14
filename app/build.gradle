@@ -2,6 +2,15 @@ plugins {
     id 'com.android.application'
 }
 
+// Release signing key, configured outside the repo: set
+// extraquiet.keystoreProperties=/path/to/keystore.properties in ~/.gradle/gradle.properties.
+// That file holds storeFile, storePassword, keyAlias and keyPassword.
+def keystoreProps = new Properties()
+def keystorePropsPath = findProperty('extraquiet.keystoreProperties')
+if (keystorePropsPath != null) {
+    file(keystorePropsPath).withInputStream { keystoreProps.load(it) }
+}
+
 android {
     namespace = 'net.kolya.android.extraquiet'
     compileSdk = 36
@@ -14,11 +23,22 @@ android {
         versionName = '1.0'
     }
 
+    signingConfigs {
+        if (!keystoreProps.isEmpty()) {
+            upload {
+                storeFile = file(keystoreProps['storeFile'])
+                storePassword = keystoreProps['storePassword']
+                keyAlias = keystoreProps['keyAlias']
+                keyPassword = keystoreProps['keyPassword']
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled = false
-            // Signed with the debug key so the APK can be sideloaded directly.
-            signingConfig = signingConfigs.debug
+            // Without an upload key, fall back to the debug key so release builds still install.
+            signingConfig = keystoreProps.isEmpty() ? signingConfigs.debug : signingConfigs.upload
         }
     }
 

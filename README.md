@@ -32,8 +32,13 @@ a reboot Extra quiet is off until you turn it on again.
 ## Build
 
 ```
-./gradlew assembleRelease   # -> app/build/outputs/apk/release/app-release.apk
+./gradlew bundleRelease     # -> app/build/outputs/bundle/release/app-release.aab (for Google Play)
+./gradlew assembleRelease   # -> app/build/outputs/apk/release/app-release.apk (for sideloading)
 ```
+Release builds are signed with the upload key named by
+`extraquiet.keystoreProperties` in `~/.gradle/gradle.properties` (a properties
+file with `storeFile`, `storePassword`, `keyAlias`, `keyPassword`); without it
+they fall back to the debug key.
 Needs JDK 17+ (set `JAVA_HOME`, or `org.gradle.java.home` in
 `~/.gradle/gradle.properties`) and the Android SDK (`ANDROID_HOME`, or
 `sdk.dir` in `local.properties`).
