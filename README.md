@@ -29,6 +29,11 @@ Known limits: if another equalizer/effects app is grabbing the same audio, one
 of them will win (the app's status line says "another app has control!"). After
 a reboot Extra quiet is off until you turn it on again.
 
+## Store assets
+
+`store/icon-512.png` is the Play Store icon; `store/icon.svg` is the same design
+as `app/src/main/res/drawable/ic_launcher_foreground.xml`, on its background.
+
 ## Build
 
 ```

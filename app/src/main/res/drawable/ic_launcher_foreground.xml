@@ -1,15 +1,21 @@
+<!-- "Moon Q": an off-center ring (thick at lower left, thin at upper right) with a
+     tapered tail, on the 108x108 adaptive-icon canvas (safe zone r=33 around 54,54). -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     <group
-        android:scaleX="2"
-        android:scaleY="2"
-        android:translateX="30"
-        android:translateY="30">
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.93"
+        android:scaleY="0.93">
         <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M18.5,12c0,-1.77 -1.02,-3.29 -2.5,-4.03v8.05c1.48,-0.73 2.5,-2.25 2.5,-4.02zM5,9v6h4l5,5V4L9,9H5z" />
+            android:fillColor="#F3E7C4"
+            android:fillType="evenOdd"
+            android:pathData="M28.50,52.50a23.50,23.50 0 1,0 47.00,0a23.50,23.50 0 1,0 -47.00,0zM38.50,49.00a17.00,17.00 0 1,0 34.00,0a17.00,17.00 0 1,0 -34.00,0z" />
+        <path
+            android:fillColor="#F3E7C4"
+            android:pathData="M56.95,57.45L71.62,65.40Q75.63,71.65 78.80,78.73L78.23,79.30Q71.15,76.13 64.90,72.12z" />
     </group>
 </vector>
